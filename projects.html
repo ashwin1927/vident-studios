@@ -2,91 +2,125 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Vident Studios</title>
-  <link rel="icon" type="image/png" href="https://i.imgur.com/SDiBqIb.png"/>
-	<link href="style.css" rel="stylesheet" type="text/css" />
-	<meta content="Vident Studios" property="og:title" />
-	<meta content="Coding on the Web, One pixel at a time." property="og:description" />
-	<meta content="https://www.videntstudios.com" property="og:url" />
-	<meta content="https://i.imgur.com/SDiBqIb.png" property="og:image" />
-	<meta content="#1031ae" data-react-helmet="true" name="theme-color" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vident Studios</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta content="Vident Studios" property="og:title" />
+  <meta content="Coding on the Web, One pixel at a time." property="og:description" />
+  <meta content="https://www.videntstudios.com" property="og:url" />
+  <meta content="https://i.imgur.com/SDiBqIb.png" property="og:image" />
+  <meta content="#1031ae" data-react-helmet="true" name="theme-color" />
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
-  
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
-  
 </style>
-<body class="" id="body">
-  
-	<main>
-   <footer style="border-top: none;">
-			<div class="socials">
-				<h1>Vident Studios</h1>
-			</div>
 
-			<button onclick="changeTheme();">
-				<ion-icon name="moon-outline" id="theme-icon"></ion-icon>
-			</button>
-		</footer>
+<body class="" id="body">
+  <div class="bg"></div>
+
+  <main>
+    <footer style="border-top: none;">
+      <div class="socials">
+        <a href="/">
+          <h1>Vident Studios</h1>
+        </a>
+      </div>
+
+      <button class="btn-mode" onclick="changeTheme();">
+        <ion-icon name="moon-outline" id="theme-icon"></ion-icon>
+      </button>
+    </footer>
 
     <section>
-       <div class="header">
+      <div class="header">
         <h2> Projects </h2>
-       </div>
-    
+      </div>
 
 
 
 
-      <div class="gallery">
 
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer">
-		</div>
+      <div class="gallery-image">
+        <div onclick="window.open('https://vtalk.videntstudios.com')" class="img-box">
+          <img src="/images/projects/vtalk.png" alt="vtalk" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Vtalk</p>
+              <p class="opacity-low">vtalk.videntstudios.com</p>
+            </div>
+          </div>
+        </div>
+        <div onclick="window.open('https://pelly.videntstudios.com')" class="img-box">
+          <img src="/images/projects/pelly.png" alt="pelly" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Pelly</p>
+              <p class="opacity-low">pelly.videntstudios.com</p>
+            </div>
+          </div>
+        </div>
+        <div onclick="window.open('https://link.videntstudios.com')" class="img-box">
+          <img src="/images/projects/link.png" alt="link" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Link</p>
+              <p class="opacity-low">link.videntstudios.com</p>
+            </div>
+          </div>
+        </div>
+        <div onclick="window.open('https://tasks.videntstudios.com')" class="img-box">
+          <img src="/images/projects/tasks.png" alt="tasks" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Tasks</p>
+              <p class="opacity-low">tasks.videntstudios.com</p>
+            </div>
+          </div>
+        </div>
+        <div onclick="window.open('https://maise.videntstudios.com')" class="img-box">
+          <img src="/images/projects/maise.png" alt="maise" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Maise</p>
+              <p class="opacity-low">maise.videntstudios.com</p>
+            </div>
+          </div>
+        </div>
+        <div onclick="window.open('https://dizio.videntstudios.com')" class="img-box">
+          <img src="/images/projects/dizio.png" alt="dizio" />
+          <div class="transparent-box">
+            <div class="caption">
+              <p>Dizio</p>
+              <p class="opacity-low">dizio.videntstudios.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop" alt="sunset behind San Francisco city skyline">
-		</div>
+      </div>
 
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop" alt="people holding umbrellas on a busy street at night lit by street lights and illuminated signs in Tokyo, Japan">
-		</div>
+      </div>
 
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop" alt="car interior from central back seat position showing driver and blurred view through windscreen of a busy road at night">
-		</div>
-
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1445810694374-0a94739e4a03?w=500&h=500&fit=crop" alt="back view of woman wearing a backpack and beanie waiting to cross the road on a busy street at night in New York City, USA">
-		</div>
-
-		<div class="gallery-item">
-			<img class="gallery-image" src="https://images.unsplash.com/photo-1486334803289-1623f249dd1e?w=500&h=500&fit=crop" alt="man wearing a black jacket, white shirt, blue jeans, and brown boots, playing a white electric guitar while sitting on an amp">
-		</div>
-
-	</div>
-
-</div>
-      
     </section>
-	
 
-		<footer style="background-color: transparent;">
-			<div class="socials">
-				<p>© 2023 Vident Studios</p>
-			</div>
 
-		</footer>
-   
-	</main>
-  
+    <footer style="background-color: transparent;">
+      <div class="socials">
+        <p>© 2023 Vident Studios</p>
+      </div>
 
-	<script src="script.js"></script>
-   
+    </footer>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>

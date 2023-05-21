@@ -80,7 +80,7 @@ h2 {
   margin-bottom: 10%;
 }
 
-button {
+footer button {
   background: none;
   padding: 4px;
   border-radius: 4px;
@@ -93,11 +93,11 @@ button {
   align-items: center;
 }
 
-button:hover {
+footer button:hover {
   background: var(--background-2);
 }
 
-button:active {
+footer button:active {
   background: var(--background-3);
 }
 
@@ -119,6 +119,51 @@ main section {
 }
 
 
+
+.socials a {
+  text-decoration: none;
+  color: var(--foreground-1);
+  padding: 16px 24px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .01);
+}
+
+.socials a::after {
+  position: absolute;
+  content: "";
+  top: -10px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9) translateZ(0);
+  filter: blur(40px);
+  background: linear-gradient(to left,
+      #ff5770,
+      #e4428d,
+      #c42da8,
+      #9e16c3,
+      #6501de,
+      #9e16c3,
+      #c42da8,
+      #e4428d,
+      #ff5770);
+  background-size: 200% 200%;
+  animation: animateGlow 1.25s linear infinite;
+
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 200% 50%;
+  }
+}
 
 
 
@@ -180,15 +225,29 @@ main footer button ion-icon {
     align-items: flex-start;
   }
 
-  h1{
+  h1 {
     margin-top: 10px;
+    width: fit-content;
+    font-size: 22px;
   }
 
- footer button{
-   margin-top: 17px;
-   margin-left: 30px;
- }
-  
+  .cta {
+    padding: 12px 4px;
+  }
+
+  .socials a::after {
+    top: 6px;
+  }
+
+  footer button {
+    margin-top: 17px;
+    margin-left: 30px;
+  }
+
+
+  .error-sec {
+    margin-top: 80%;
+  }
 }
 
 
@@ -213,64 +272,72 @@ main footer button ion-icon {
   background: #333333;
 }
 
-.btn-grp{
+.btn-grp {
   width: max-content;
-  display: inline-flex;
+  display: contents;
   background: transparent;
   margin-left: -12px;
   margin-bottom: 5%;
 }
 
 .cta {
- position: relative;
- margin: auto;
- padding: 12px 18px;
- transition: all 0.2s ease;
- border: none;
- background: transparent;
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: transparent;
 }
 
+
+
 .cta:before {
- content: "";
- position: absolute;
- top: 0;
- left: 0;
- display: block;
- background: transparent;
- width: 100%;
- height: 100%;
- transition: all 0.3s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease;
 }
 
 .cta span {
- position: relative;
- font-family: "Ubuntu", sans-serif;
- font-size: 32px;
- font-weight: 700;
- letter-spacing: 0.05em;
- color: var(--foreground-1);
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--foreground-1);
 }
 
+
+
 .cta svg {
- position: relative;
- top: 0;
- margin-left: 10px;
- fill: none;
- stroke-linecap: round;
- stroke-linejoin: round;
- stroke: var(--foreground-1);
- stroke-width: 2;
- transform: translateX(-5px);
- transition: all 0.3s ease;
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--foreground-1);
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
 }
 
 
 .cta:hover svg {
- transform: translateX(0);
+  transform: translateX(0);
+}
+
+.cta:hover {
+  cursor: pointer;
 }
 
 .cta:active {
- transform: scale(0.95);
+  transform: scale(0.95);
   background: var(--background-1);
 }
 
@@ -279,51 +346,192 @@ main footer button ion-icon {
 
 
 
-.gallery {
-	display: flex;
-	flex-wrap: wrap;
-	/* Compensate for excess margin on outer gallery flex items */
-	margin: -1rem -1rem;
-}
 
-.gallery-item {
-	/* Minimum width of 24rem and grow to fit available space */
-	flex: 1 0 24rem;
-	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
-	margin: 1rem;
-	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
-	overflow: hidden;
-}
+
+
 
 .gallery-image {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	transition: transform 400ms ease-out;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 50px;
 }
 
-.gallery-image:hover {
-	transform: scale(1.15);
+.gallery-image img {
+  height: 450px;
+  width: 400px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+  border-radius: 50px;
 }
 
-/*
+.img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: 450px;
+  width: 400px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+  border-radius: 50px;
+}
 
-The following rule will only run if your browser supports CSS grid.
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
 
-Remove or comment-out the code block below to see how the browser will fall-back to flexbox styling. 
+.transparent-box {
+  height: 450px;
+  width: 400px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+  border-radius: 50px;
+}
 
-*/
+.img-box:hover img {
+  transform: scale(1.1);
+}
 
-@supports (display: grid) {
-	.gallery {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
-		grid-gap: 2rem;
-	}
+.img-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
-	.gallery,
-	.gallery-item {
-		margin: 0;
-	}
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption>p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
+
+
+
+
+
+
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent url('http://assets.iceable.com/img/noise-transparent.png') repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation .2s infinite;
+  opacity: .9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0)
+  }
+
+  10% {
+    transform: translate(-5%, -5%)
+  }
+
+  20% {
+    transform: translate(-10%, 5%)
+  }
+
+  30% {
+    transform: translate(5%, -10%)
+  }
+
+  40% {
+    transform: translate(-5%, 15%)
+  }
+
+  50% {
+    transform: translate(-10%, 5%)
+  }
+
+  60% {
+    transform: translate(15%, 0)
+  }
+
+  70% {
+    transform: translate(0, 10%)
+  }
+
+  80% {
+    transform: translate(-15%, 0)
+  }
+
+  90% {
+    transform: translate(10%, 5%)
+  }
+
+  100% {
+    transform: translate(5%, 0)
+  }
+}
+
+
+
+.backlink {
+  color: var(--foreground-1);
+}
+
+.code-area {
+  position: absolute;
+  width: 320px;
+  min-width: 320px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.code-area>span {
+  display: block;
+}
+
+.error-sec {
+  margin-top: 40%;
+}
+
+@media screen and (max-width: 320px) {
+  .code-area {
+    font-size: 5vw;
+    min-width: auto;
+    width: 95%;
+    margin: auto;
+    padding: 5px;
+    padding-left: 10px;
+    line-height: 6.5vw;
+  }
+}
+
+
+@media (max-width: 663px) {
+  .error-sec {
+    margin-top: 150%;
+  }
+
+  .gallery-image img {
+    width: 300px;
+  }
 }
