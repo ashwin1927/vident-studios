@@ -5,22 +5,3 @@
   ]
 }
 
-{
-  "redirects": [
-    { 
-      "source": "/projects",
-      "destination": "/projects.html", 
-      "statusCode": 301
-    }
-  ]
-}
-
-{
-  "redirects": [
-    { 
-      "source": "/home",
-      "destination": "/", 
-      "statusCode": 301
-    }
-  ]
-}
