@@ -4,3 +4,13 @@
     { "src": "/(.*)", "status": 404, "dest": "/404.html" }
   ]
 }
+
+{
+  "redirects": [
+    { 
+      "source": "/projects",
+      "destination": "/projects.html", 
+      "statusCode": 301
+    }
+  ]
+}
