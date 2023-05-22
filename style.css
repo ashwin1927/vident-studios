@@ -364,6 +364,7 @@ main footer button ion-icon {
   transform: scale(1.0);
   transition: transform 0.4s ease;
   border-radius: 50px;
+  margin-left: -10%;
 }
 
 .img-box {
@@ -533,5 +534,14 @@ main footer button ion-icon {
 
   .gallery-image img {
     width: 300px;
+    height: 350px;
+  }
+
+  .transparent-box {
+    height: 350px;
+  }
+
+  .img-box {
+    height: 350px;
   }
 }
