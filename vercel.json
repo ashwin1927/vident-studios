@@ -14,3 +14,13 @@
     }
   ]
 }
+
+{
+  "redirects": [
+    { 
+      "source": "/home",
+      "destination": "/", 
+      "statusCode": 301
+    }
+  ]
+}
