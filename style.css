@@ -364,7 +364,7 @@ main footer button ion-icon {
   transform: scale(1.0);
   transition: transform 0.4s ease;
   border-radius: 50px;
-  margin-left: -10%;
+  margin-left: 0%;
 }
 
 .img-box {
@@ -376,7 +376,7 @@ main footer button ion-icon {
   display: inline-block;
   color: white;
   position: relative;
-  background-color: white;
+  background-color: transparent;
   border-radius: 50px;
 }
 
